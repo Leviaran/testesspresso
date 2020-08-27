@@ -33,15 +33,7 @@ class ChangeUiTest {
 //        R.id.et_pass
 //        R.id.btn_action
 //        R.id.et_status
-        onView(withId(R.id.et_username)).perform(typeText("Hallo"), closeSoftKeyboard())
-            .check(matches(withText("Hallo")))
 
-        onView(withId(R.id.et_pass)).perform(typeText("12345678"), closeSoftKeyboard())
-            .check(matches(withFontSize(8)))
-
-        onView(withId(R.id.btn_action)).perform(click())
-        onView(withId(R.id.et_status)).perform(setTextViewVisibitity(true))
-        onView(withId(R.id.et_status)).check(matches(isDisplayed()))
     }
 
     fun withFontSize(expectedSize: Int): Matcher<View> {
